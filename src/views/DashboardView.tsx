@@ -111,7 +111,7 @@ export default function DashboardView() {
         </ul>
       ) : (
 
-        <p className=" text-centr py-20 ">No hay proyectos aún {''}
+        <p className=" text-centr py-20 text-white">No hay proyectos aún  {'>'}
           <Link
             to='/projects/create'
             className="text-orange-500 font-bold "

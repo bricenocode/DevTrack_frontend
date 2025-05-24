@@ -28,8 +28,8 @@ export default function LoginView() {
 
   return (
     <>
-    <h1 className="text-5xl font-black text-white">Inicia Sesión</h1>
-      <p className="text-2xl font-light text-white mt-5">
+    <h1 className="text-3xl md:text-5xl font-black text-white">Inicia Sesión</h1>
+      <p className="text-sm md:text-md font-light text-white mt-5 ">
         Comienza a planear tus proyectos {''}
         <span className=" text-orange-600 font-bold"> iniciando sesión</span>
         {''} en este formulario
@@ -37,19 +37,20 @@ export default function LoginView() {
 
       <form
         onSubmit={handleSubmit(handleLogin)}
-        className="space-y-8 p-10 mt-10  bg-transparent"
+        className="space-y-6 p-5 mt-5 md:space-y-8 md:p-10 md:mt-10 bg-transparent"
         noValidate
       >
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-3 md:gap-5">
           <label
-            className="font-normal text-2xl text-white"
+            className="font-normal text-base md:text-2xl text-white"
+            htmlFor="email"
           >Email</label>
 
           <input
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full p-3   border-gray-300 border"
+            className="w-full p-2 md:p-3 border-gray-300 border"
             {...register("email", {
               required: "El Email es obligatorio",
               pattern: {
@@ -63,15 +64,17 @@ export default function LoginView() {
           )}
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-3 md:gap-5">
           <label
-            className="font-normal text-2xl text-white"
+            className="font-normal text-base md:text-2xl text-white"
+            htmlFor="password"
           >Password</label>
 
           <input
+            id="password"
             type="password"
             placeholder="Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-2 md:p-3 border-gray-300 border"
             {...register("password", {
               required: "El Password es obligatorio",
             })}
@@ -84,20 +87,20 @@ export default function LoginView() {
         <input
           type="submit"
           value='Iniciar Sesión'
-          className="bg-orange-600 hover:bg-orange-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="bg-orange-600 hover:bg-orange-700 w-full p-2 md:p-3 text-white font-black text-lg md:text-xl cursor-pointer"
         />
       </form>
-      <nav className="mt-10 flex flex-col space-y-4"> 
+      <nav className="mt-5 md:mt-10 flex flex-col space-y-3 md:space-y-4">
         <Link
           to={"/auth/register"}
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-sm md:text-base"
         >
           ¿No tiene cuenta? Crea Una!
         </Link>
-        
+
         <Link
           to={"/auth/forgot-password"}
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-sm md:text-base"
         >
           ¿Olvidaste tu contraseña?
         </Link>
