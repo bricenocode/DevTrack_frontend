@@ -47,8 +47,8 @@ export default function EditProyectoForm({data, projectId}:EditProyectoFormProps
   return (
    <>
     <div className="max-w-3xl mx-auto">
-        <h1 className="text-5xl font-black"> Editar Proyecto </h1>
-        <p className="text-2xl font-light text-gray-500 mt-5">Llena el siguiente formulario para poder editar el proyecto</p>
+        <h1 className="text-5xl font-black text-white"> Editar Proyecto </h1>
+        <p className="text-2xl font-light text-gray-300 mt-5">Llena el siguiente formulario para poder editar el proyecto</p>
         <nav className="my-5">
           <Link
             className="bg-orange-400 hover:bg-orange-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
