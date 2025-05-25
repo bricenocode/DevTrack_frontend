@@ -198,7 +198,7 @@ export default function AppLayout() {
     if (data) return (
         <WebSocketContext.Provider value={{ websocket, connected, currentUserEmail, fetchRecentConversations: fetchRecentConversationsRef, websocketError }}>
             <header
-                className="bg-neutral-900 py-5"
+                className="bg-[#0c0d0c] py-5"
             >
                 <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center">
                     <div className="w-56">
