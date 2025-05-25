@@ -33,24 +33,24 @@ export default function ConfirmAccountView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white">Confirma tu Cuenta</h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <p className="text-2xl font-light text-white mt-2">
         Ingresa el código que recibiste {''}
         <span className=" text-orange-500 font-bold"> por e-mail</span>
       </p>
       <form
-        className="space-y-8 p-10 mt-10 rounded-lg"
+        className="space-y-8 p-10 mt-2 rounded-lg"
       >
         <label
-          className="font-normal text-2xl text-center block "
+          className="font-normal text-2xl text-center block text-white"
         >Código de 6 dígitos</label>
-        <div className=" flex justify-center gap-5">
+        <div className=" flex justify-center gap-2 md:gap-5">
           <PinInput value={token} onChange={handleChange} onComplete={handleComplete}>
-            <PinInputField className="size-14 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
-            <PinInputField className="size-14 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
-            <PinInputField className="size-14 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
-            <PinInputField className="size-14 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
-            <PinInputField className="size-14 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
-            <PinInputField className="size-14 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
+            <PinInputField className="size-3 md:size-12 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
+            <PinInputField className="size-3 md:size-12 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
+            <PinInputField className="size-3 md:size-12 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
+            <PinInputField className="size-3 md:size-12 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
+            <PinInputField className="size-3 md:size-12 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
+            <PinInputField className="size-3 md:size-12 p-4 rounded-lg border-orange-600 border placeholder-white text-2xl font-bold text-center"></PinInputField>
           </PinInput>
         </div>
       </form>

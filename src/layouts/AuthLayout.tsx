@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify"
 export default function AuthLayout() {
   return (
     <>
-      <div className="bg-[#0c0d0c] min-h-screen">
+      <div className="bg-neutral-900 min-h-screen">
         <div className="py-10 lg:py-20 mx-auto min-w-[290px]">
           <div className="size-44 md:size-80 mx-auto">
             <Link to={"/auth/login"}>
