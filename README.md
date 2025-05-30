@@ -6,6 +6,33 @@ DevTrack es una aplicación web diseñada para la gestión de tareas y la colabo
 
 La idea central de DevTrack es simplificar el flujo de trabajo de los desarrolladores, permitiéndoles centrarse en la codificación y la entrega de valor, minimizando el tiempo dedicado a la organización y el seguimiento manual de las tareas.
 
+## Arquitectura principal
+![image](https://github.com/user-attachments/assets/885bb279-4354-4892-a127-5d70081bb894)
+
+## Arbol
+public
+└───src
+    ├───components
+    │   ├───auth
+    │   ├───chat
+    │   ├───notes
+    │   ├───profile
+    │   ├───projects
+    │   ├───tasks
+    │   └───team
+    ├───hooks
+    ├───layouts
+    ├───lib
+    ├───locales
+    ├───services
+    ├───types
+    ├───utils
+    └───views
+        ├───404
+        ├───auth
+        ├───profile
+        └───projects
+
 ## Tecnologías Utilizadas
 
 Este proyecto de Frontend está construido utilizando las siguientes tecnologías y dependencias clave:
