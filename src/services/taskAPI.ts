@@ -26,9 +26,7 @@ export async function getTaskById({projectId, taskId}: Pick <TaskAPI,'projectId'
   try {
     const url = `/projects/${projectId}/tasks/${taskId}`
     const {data} = await api(url)
-    console.log(data)
     const response = TaskSchema.safeParse(data)
-    console.log(response)
     if(response.success){
       return response.data
     }else {
@@ -71,7 +69,6 @@ export async function updateStatus({projectId, taskId, status}: Pick <TaskAPI, '
   try {
     const url = `/projects/${projectId}/tasks/${taskId}/status`
     const {data} = await api.post<string>(url,{status})
-    console.log(data)
     return data
   } catch (error) {
     if(isAxiosError(error) && error.response){

@@ -43,12 +43,9 @@ export async function login(formData: UserLoginForm){
   try {
     const url = `/auth/login`
     const { data } = await api.post<string>(url, formData)
-    console.log(data)
     localStorage.setItem('AUTH_TOKEN', data)
-    console.log(data)
     return data
   } catch (error) {
-    console.log(error)
     if(isAxiosError(error) && error.response){
       throw new Error(error.response.data)
     }

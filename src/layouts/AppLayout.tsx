@@ -91,7 +91,6 @@ export default function AppLayout() {
             return;
         }
 
-        console.log('CONNECT_WS: Iniciando nueva conexión WebSocket a:', wsUrl);
         websocket.current = new WebSocket(wsUrl);
 
         websocket.current.onopen = () => {
@@ -115,7 +114,6 @@ export default function AppLayout() {
         };
 
         websocket.current.onerror = (error) => {
-            console.error('CONNECT_WS: Error WebSocket global:', error);
             setConnected(false);
             setWebsocketError('Error grave en la conexión del chat. Verifique su red o el servidor.');
         };
@@ -123,7 +121,6 @@ export default function AppLayout() {
         websocket.current.onmessage = (event) => {
             try {
                 const messageData = JSON.parse(event.data);
-                console.log("Mensaje WebSocket global recibido:", messageData);
 
                 if (messageData.type === 'private') {
                     if (messageData.sender !== currentUserEmail) {
@@ -183,7 +180,6 @@ export default function AppLayout() {
 
         return () => {
             if (websocket.current && websocket.current.readyState === WebSocket.OPEN) {
-                console.log('CONNECT_WS: Cerrando WebSocket al desmontar AppLayout.');
                 websocket.current.close(1000, 'Component unmount');
             }
             websocket.current = null;

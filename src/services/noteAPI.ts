@@ -25,7 +25,6 @@ export async function getNotes({projectId, taskId} : Pick<NoteAPIType, 'projectI
   try {
     const url = `projects/${projectId}/tasks/${taskId}/notes`
     const { data } = await api(url)
-    console.log(data)
     return(data)
   } catch (error) {
     if(isAxiosError(error) && error.response){

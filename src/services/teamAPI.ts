@@ -17,8 +17,6 @@ export async function findUserByEmail({projectId, formData} : {projectId: Projec
 
 export async function addUserToProject({projectId, id} : {projectId: Project['_id'], id: TeamMember['_id']}){
     try {
-
-        console.log({id})
       const url = `/projects/${projectId}/team`
       const data = await api.post(url, {id})
       return data
@@ -33,7 +31,6 @@ export async function getProjectTeam(projectId :  Project['_id']){
 
       const url = `/projects/${projectId}/team`
       const data = await api(url)
-        console.log(data)
       const response = TeamMembersSchema.safeParse(data.data)
       if(response.success){
         return response
