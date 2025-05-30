@@ -17,6 +17,7 @@ interface WebSocketContextType {
 
 const WebSocketContext = createContext<WebSocketContextType | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useWebSocket = () => {
     const context = useContext(WebSocketContext);
     if (context === undefined) {
@@ -113,10 +114,6 @@ export default function AppLayout() {
             }
         };
 
-        websocket.current.onerror = (error) => {
-            setConnected(false);
-            setWebsocketError('Error grave en la conexión del chat. Verifique su red o el servidor.');
-        };
 
         websocket.current.onmessage = (event) => {
             try {
