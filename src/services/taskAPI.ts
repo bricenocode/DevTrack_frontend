@@ -64,7 +64,7 @@ export async function deleteTask({projectId, taskId}: Pick <TaskAPI, 'projectId'
     if(isAxiosError(error) && error.response){
       throw new Error(error.response.data.error)
     }
-  }
+  } 
 }
 
 export async function updateStatus({projectId, taskId, status}: Pick <TaskAPI, 'projectId' | 'taskId' | 'status'>){

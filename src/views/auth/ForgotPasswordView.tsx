@@ -75,14 +75,14 @@ export default function ForgotPasswordView() {
           to='/auth/login'
           className="text-center text-gray-300 font-normal"
         >
-          ¿Ya tienes cuenta? Iniciar Sesión
+          ¿Ya tienes cuenta? ¡Iniciar Sesión!
         </Link>
 
         <Link
           to='/auth/register'
           className="text-center text-gray-300 font-normal"
         >
-          ¿No tienes cuenta? Crea una
+          ¿No tienes cuenta? ¡Crea una!
         </Link>
       </nav>
     </>

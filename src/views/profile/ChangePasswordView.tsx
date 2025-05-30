@@ -35,8 +35,8 @@ export default function ChangePasswordView() {
     <>
       <div className="mx-auto max-w-3xl">
 
-        <h1 className="text-5xl font-black text-white">Cambiar Password</h1>
-        <p className="text-2xl font-light text-gray-200 mt-5">Utiliza este formulario para cambiar tu password</p>
+        <h1 className="text-5xl font-black text-white">Cambiar contraseña</h1>
+        <p className="text-2xl font-light text-gray-200 mt-5">Utiliza este formulario para cambiar tu contraseña</p>
 
         <form
           onSubmit={handleSubmit(handleChangePassword)}
@@ -47,14 +47,14 @@ export default function ChangePasswordView() {
             <label
               className="text-sm uppercase font-bold text-white"
               htmlFor="current_password"
-            >Password Actual</label>
+            >Contraseña Actual</label>
             <input
               id="current_password"
               type="password"
-              placeholder="Password Actual"
+              placeholder="Contraseña Actual"
               className="w-full p-3  border border-gray-200"
               {...register("currentPassword", {
-                required: "El password actual es obligatorio",
+                required: "La contraseña actual es obligatoria",
               })}
             />
             {errors.currentPassword && (
@@ -66,17 +66,17 @@ export default function ChangePasswordView() {
             <label
               className="text-sm uppercase font-bold text-white"
               htmlFor="password"
-            >Nuevo Password</label>
+            >Nueva contraseña</label>
             <input
               id="password"
               type="password"
-              placeholder="Nuevo Password"
+              placeholder="Nueva contraseña"
               className="w-full p-3  border border-gray-200"
               {...register("password", {
                 required: "El Nuevo Password es obligatorio",
                 minLength: {
                   value: 8,
-                  message: 'El Password debe ser mínimo de 8 caracteres'
+                  message: 'La contraseña debe ser mínimo de 8 caracteres'
                 }
               })}
             />
@@ -88,16 +88,16 @@ export default function ChangePasswordView() {
             <label
               htmlFor="password_confirmation"
               className="text-sm uppercase font-bold"
-            >Repetir Password</label>
+            >Repetir contraseña</label>
 
             <input
               id="password_confirmation"
               type="password"
               placeholder="Repetir Password"
-              className="w-full p-3  border border-gray-200"
+              className="w-full p-3  border border-gray-200 text-black"
               {...register("passwordConfirmation", {
                 required: "Este campo es obligatorio",
-                validate: value => value === password || 'Los Passwords no son iguales'
+                validate: value => value === password || 'Los contraseñas no son iguales'
               })}
             />
             {errors.passwordConfirmation && (
@@ -107,7 +107,7 @@ export default function ChangePasswordView() {
 
           <input
             type="submit"
-            value='Cambiar Password'
+            value='Cambiar contraseña'
             className="bg-orange-600 rounded w-full p-3 text-white uppercase font-bold hover:bg-orange-700 cursor-pointer transition-colors"
           />
         </form>

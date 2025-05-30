@@ -18,7 +18,6 @@ export async function updateProfile(formData : UserProfileForm){
 
 export async function changePassword(formData : UpdateCurrentUserPasswordForm){
   try {
-    console.log(formData.passwordConfirmation)
     const url = `/auth/update-password`
     const { data } = await api.put<string>(url, formData)
     return data

@@ -48,8 +48,9 @@ export async function login(formData: UserLoginForm){
     console.log(data)
     return data
   } catch (error) {
+    console.log(error)
     if(isAxiosError(error) && error.response){
-      throw new Error(error.response.data.error)
+      throw new Error(error.response.data)
     }
   }
 }

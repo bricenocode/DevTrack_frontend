@@ -95,7 +95,7 @@ export default function LoginView() {
           to={"/auth/register"}
           className="text-center text-gray-300 font-normal text-sm md:text-base"
         >
-          ¿No tiene cuenta? Crea Una!
+          ¿No tiene cuenta? ¡Crea Una!
         </Link>
 
         <Link
