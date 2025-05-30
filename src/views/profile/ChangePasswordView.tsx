@@ -93,7 +93,7 @@ export default function ChangePasswordView() {
             <input
               id="password_confirmation"
               type="password"
-              placeholder="Repetir Password"
+              placeholder="Repetir contraseña"
               className="w-full p-3  border border-gray-200 text-black"
               {...register("passwordConfirmation", {
                 required: "Este campo es obligatorio",
