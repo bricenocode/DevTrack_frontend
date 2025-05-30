@@ -10,6 +10,7 @@ La idea central de DevTrack es simplificar el flujo de trabajo de los desarrolla
 ![image](https://github.com/user-attachments/assets/885bb279-4354-4892-a127-5d70081bb894)
 
 ## Arbol
+```
 public
 └───src
     ├───components
@@ -32,6 +33,7 @@ public
         ├───auth
         ├───profile
         └───projects
+````
 
 ## Tecnologías Utilizadas
 
