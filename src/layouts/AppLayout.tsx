@@ -183,7 +183,7 @@ export default function AppLayout() {
         };
     }, [authToken, currentUserEmail, connectWebSocket]);
 
-    if(isLoading) return 'Cargando...'
+    if(isLoading) return <p className="text-white text-2xl">Cargando...</p>
     if(isError){
         return <Navigate to='/auth/login'/>
     }
